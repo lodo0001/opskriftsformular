@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="max-w-[1200px] mx-auto mt-10">{children}</body>
+      <body className="max-w-[1200px] mx-auto mt-10 font-schoolbell">
+        {children}
+      </body>
     </html>
   );
 }

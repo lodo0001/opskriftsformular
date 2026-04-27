@@ -26,6 +26,7 @@ export default function DirectionsAndIngre() {
         <h1 className="text-[#142AA6] font-bold">Directions:</h1>
         <textarea
           placeholder="Step 1..."
+          name="directions"
           value={directions}
           onChange={(e) => setDirections(e.target.value)}
           className="border p-4 w-xl"
@@ -57,9 +58,11 @@ export default function DirectionsAndIngre() {
         )}
       </div>
       {/* ingredient input */}
-      <div className="">
+      <div>
         <h1 className="text-[#142AA6] font-bold">Add ingredient here</h1>
+
         <input
+          type="text"
           value={ingredient}
           onChange={(e) => setIngredient(e.target.value)}
           placeholder="flour 200gram.."
@@ -69,6 +72,12 @@ export default function DirectionsAndIngre() {
         <button type="button" onClick={addIngredient}>
           +
         </button>
+
+        <input
+          type="hidden"
+          name="ingredients"
+          value={JSON.stringify(ingredients)}
+        />
       </div>
     </div>
   );
